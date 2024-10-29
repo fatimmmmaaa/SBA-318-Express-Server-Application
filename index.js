@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 
 dotenv.config();
 
+
 const app = express();
 app.use(express.json());
 
@@ -35,7 +36,8 @@ app.set("views", path.join(__dirname, "views/ejs"));
 
 //root endpoint
 app.get("/", (req, res) => {
-    res.render("index", { message: "Welcome, only starter Pokemon!" }); // Pass the message variable
+    res.render("index", { message: "Welcome, only starter Pokemon!" }); 
+    // res.send("This will cause an error!");
 });
 
 
@@ -81,6 +83,11 @@ app.use((req, res) => {
 
 //err -handling middleware
 app.use((err, req, res, next) => {
+
+    if(res.headersSent){
+        return next(err);
+    }
+
   res.status(err.send || 500);
   res.json({ message: err.message });
 });

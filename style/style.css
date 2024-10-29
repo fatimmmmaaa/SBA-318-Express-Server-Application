@@ -1,0 +1,32 @@
+body {
+    background-color: #006aba;
+    color: yellow;
+    outline:#000000 black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.searchbox {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%; 
+    padding: 8px;
+    margin-bottom: 10px; 
+    border: 1px solid #000000; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+
+button {
+    padding: 10px 15px;
+    background-color: yellow;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

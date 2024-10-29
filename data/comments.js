@@ -6,17 +6,17 @@ export const comments = [
   },
   {
     id: 2,
-    postId: 1,
+    postId: 2,
     content: "Squirtle!",
   },
   {
     id: 3,
-    postId: 1,
+    postId: 3,
     content: "Bulbasaur!",
   },
   {
     id: 4,
-    postId: 1,
+    postId: 4,
     content: "Charmandeerrr!",
   },
 ];
